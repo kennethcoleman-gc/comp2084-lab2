@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "ProductsView";
+}
+
+<h2>Products</h2>
+<ul>
+    @foreach (string product in ViewData["Products"] as IEnumerable<string>)
+    {
+        <li>@Html.ActionLink(product, "Details", "Products", new { product }, null)</li>
+
+    }
+</ul>
